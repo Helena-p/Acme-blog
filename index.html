@@ -16,26 +16,33 @@
     </head>
     <body>
         <!-- Header with navigation -->
-        <nav class="navigation">
-            <ul class="nav__list">
-                <li class="nav__item"><a href="#">home</a></li>
-                <li class="nav__item"><a href="#">blog</a></li>
-            </ul>
-        </nav>
         <header>
-            <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
-            <h1>Lorem ipsum dolor sit amet, consectet adipiscing</h1>
-            <h2>
-                Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-            </h2>
-            <a href="#">
-                <p>connect &GT;</p>
-            </a>
+            <div>
+                <img src="src/img/hero.jpg" class="hero-img" />
+                <div class="navigation">
+                    <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
+                    <nav class="navigation">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#">home</a></li>
+                            <li class="nav__item"><a href="#">blog</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="container">
+                <h1>Lorem ipsum dolor sit amet, consectet adipiscing</h1>
+                <h2>
+                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                </h2>
+                <a href="#">
+                    <p>connect &GT;</p>
+                </a>
+            </div>
         </header>
         <main>
             <!-- About -->
-            <article>
+            <article class="container">
                 <h3>About</h3>
                 <p>
                     Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
@@ -51,7 +58,7 @@
             </article>
 
             <!-- Blog -->
-            <section>
+            <section class="container">
                 <h3>Blog</h3>
                 <p>Latest thoughts, news and ideas</p>
                 <div>
@@ -62,7 +69,7 @@
             </section>
 
             <!-- Subscribe -->
-            <section>
+            <section class="container">
                 <h3>Inbox</h3>
                 <p>Knowledge letters</p>
                 <form action="" class="form">
@@ -76,7 +83,7 @@
                 </a>
             </section>
         </main>
-        <footer>
+        <footer class="container">
             <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
             <ul class="footer__list">
                 <p>Map</p>
