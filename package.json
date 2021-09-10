@@ -1,0 +1,35 @@
+{
+    "name": "acme-blog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "img": "imagemin src/img/* --out-dir=dist/img --plugin=pngquant --plugin=mozjpeg --plugin=pngcrush --plugin=zopfli",
+        "watch:sass": "sass src/sass/main.scss dist/css/style.css -w",
+        "watch:js": "chokidar 'src/**/*.js' -c 'npm run js'",
+        "watch:img": "chokidar 'src/img/**/*.*' -c 'npm run img'",
+        "devserver": "live-server",
+        "start": "npm-run-all --parallel devserver watch:sass watch:js watch:img",
+        "compile:sass": "sass src/sass/main.scss dist/css/style.comp.css",
+        "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
+        "compress:css": "sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+        "build": "npm-run-all compile:sass prefix:css compress:css img"
+    },
+    "keywords": [],
+    "author": "Helena Plantin",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^10.3.1",
+        "chokidar-cli": "^3.0.0",
+        "concat": "^1.0.3",
+        "imagemin-cli": "^7.0.0",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-pngcrush": "^7.0.0",
+        "imagemin-pngquant": "^9.0.2",
+        "imagemin-zopfli": "^7.0.0",
+        "live-server": "^1.2.1",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^8.3.1",
+        "sass": "^1.38.0"
+    }
+}
