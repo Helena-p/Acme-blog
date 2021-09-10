@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400&family=IBM+Plex+Serif:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400&family=IBM+Plex+Serif:wght@200;300;400;700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="dist/css/style.css" />
@@ -20,134 +20,169 @@
             <div>
                 <img src="src/img/hero.jpg" class="hero-img" />
                 <div class="navigation">
-                    <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
+                    <a href="#" aria-label="acme home page"
+                        ><img
+                            src="src/img/logo.svg"
+                            alt="Acme logo"
+                            class="icon"
+                    /></a>
                     <nav class="navigation">
                         <ul class="nav__list">
-                            <li class="nav__item"><a href="#">home</a></li>
-                            <li class="nav__item"><a href="#">blog</a></li>
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">blog</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            <div class="container">
-                <h1>Lorem ipsum dolor sit amet, consectet adipiscing</h1>
-                <h2>
-                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                </h2>
-                <a href="#">
-                    <p>connect &GT;</p>
-                </a>
-            </div>
         </header>
+
         <main>
+            <section class="intro text-serif">
+                <div class="container">
+                    <h1>Lorem ipsum dolor sit amet, consectet adipiscing</h1>
+                    <p class="page-intro">
+                        Lorem ipsum dolor sit amet, consectet adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna.
+                    </p>
+                    <a href="#" class="btn">
+                        <p>connect &GT;</p>
+                    </a>
+                </div>
+            </section>
             <!-- About -->
-            <article class="container">
-                <h3>About</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore dolore magna sed do
-                    amet.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna.
-                </p>
-            </article>
+            <section class="about text-500 text-serif">
+                <div class="container">
+                    <h2 class="section-title">About</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectet adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore dolore magna
+                        sed do amet.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectet adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna. Lorem ipsum dolor sit amet, consectet adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna.
+                    </p>
+                </div>
+            </section>
 
             <!-- Blog -->
-            <section class="container">
-                <h3>Blog</h3>
-                <p>Latest thoughts, news and ideas</p>
-                <div>
-                    <div class="card">
-                        <img
-                            src="/src/img/blog-1.jpg"
-                            alt="A screwdriver in front of clouds in the sky"
-                        />
-                        <div>
-                            <h3>
-                                Lorem ipsum dolor sit amet, consectet adipiscing
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectet adipiscing
-                            </p>
-                            <p>Oct 8</p>
-                            <p>8 min read</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img
-                            src="/src/img/blog-2.jpg"
-                            alt="A cactus in front of clouds in the sky"
-                        />
-                        <div>
-                            <h3>Lorem ipsum</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectet adipiscing
-                            </p>
-                            <p>Oct 8</p>
-                            <p>8 min read</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img
-                            src="/src/img/blog-3.jpg"
-                            alt="A water bottle in front of clouds in the sky"
-                        />
-                        <div>
-                            <h3>
-                                Lorem ipsum dolor sit amet, consectet adipiscing
-                            </h3>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectet adipiscing
-                            </p>
-                            <p>Oct 8</p>
-                            <p>8 min read</p>
-                        </div>
+            <section class="recent-articles bg--primary-300">
+                <div class="container">
+                    <h2 class="section-title">Blog</h2>
+                    <p class="section-subtitle">
+                        Latest thoughts, news and ideas
+                    </p>
+                    <div class="split">
+                        <article class="article-preview">
+                            <img
+                                src="/src/img/blog-1.jpg"
+                                alt="A screwdriver in front of clouds in the sky"
+                            />
+                            <div>
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectet
+                                    adipiscing
+                                </h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectet
+                                    adipiscing
+                                </p>
+                                <div class="article-preview__info">
+                                    <time datetime="2020-10-08">Oct 8</time>
+                                    <p>8 min read</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-preview">
+                            <img
+                                src="/src/img/blog-2.jpg"
+                                alt="A cactus in front of clouds in the sky"
+                            />
+                            <div>
+                                <h3>Lorem ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectet
+                                    adipiscing
+                                </p>
+                                <div class="article-preview__info">
+                                    <time datetime="2020-10-08">Oct 8</time>
+                                    <p>8 min read</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-preview">
+                            <img
+                                src="/src/img/blog-3.jpg"
+                                alt="A water bottle in front of clouds in the sky"
+                            />
+                            <div>
+                                <h3>
+                                    Lorem ipsum dolor sit amet, consectet
+                                    adipiscing
+                                </h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectet
+                                    adipiscing
+                                </p>
+                                <div class="article-preview__info">
+                                    <time datetime="2020-10-08">Oct 8</time>
+                                    <p>8 min read</p>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </section>
 
             <!-- Subscribe -->
-            <section class="container">
-                <h3>Inbox</h3>
-                <p>Knowledge letters</p>
-                <img
-                    src="src/img/newsletter.jpg"
-                    alt="Various home utilities floating in the sky"
-                />
-                <form action="" class="form">
-                    <label for="">Name</label>
-                    <input type="text" />
-                    <label for="">Email</label>
-                    <input type="email" />
-                </form>
-                <a href="#">
-                    <p>Subscribe &GT;</p>
-                </a>
+            <section class="cta">
+                <div class="container">
+                    <h2 class="section-title">Inbox</h2>
+                    <p class="section-subtitle">Knowledge letters</p>
+                    <img
+                        src="src/img/newsletter.jpg"
+                        alt="Various home utilities floating in the sky"
+                    />
+                    <form action="" method="post" class="form">
+                        <div>
+                            <label for="">Name</label>
+                            <input type="text" />
+                        </div>
+                        <div>
+                            <label for="">Email</label>
+                            <input type="email" />
+                        </div>
+                    </form>
+                    <a href="#" class="btn">
+                        <p>Subscribe &GT;</p>
+                    </a>
+                </div>
             </section>
         </main>
         <footer class="container">
-            <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
-            <ul class="footer__list">
-                <p>Map</p>
-                <li class="footer__item"><a href="">Blog</a></li>
-                <li class="footer__item"><a href="">Privacy</a></li>
-            </ul>
-            <ul class="footer__list">
-                <p>Resources</p>
-                <li class="footer__item"><a href="">Courses</a></li>
-                <li class="footer__item"><a href="">Hacks</a></li>
-                <li class="footer__item"><a href="">Free tuff</a></li>
-            </ul>
-            <div class="copyright">
-                <p>&#169; 2020 acme. All rights reserved</p>
+            <a href="#" aria-label="acme home page"
+                ><img src="src/img/logo.svg" alt="Acme logo" class="icon"
+            /></a>
+            <dl class="footer__list">
+                <dt class="text-serif">Map</dt>
+                <dd class="footer__item"><a href="#">Blog</a></dd>
+                <dd class="footer__item"><a href="#">Privacy</a></dd>
+            </dl>
+            <dl class="footer__list">
+                <dt class="text-serif">Resources</dt>
+                <dd class="footer__item"><a href="#">Courses</a></dd>
+                <dd class="footer__item"><a href="#">Hacks</a></dd>
+                <dd class="footer__item"><a href="#">Free tuff</a></dd>
+            </dl>
+            <div class="split text-serif">
+                <p class="copyright">&#169; 2020 acme. All rights reserved</p>
                 <ul class="social__list">
                     <li class="social__icon">
-                        <a href="#">
+                        <a href="https://www.pinterest.com">
                             <svg class="svg">
                                 <use
                                     xlink:href="src/img/sprite.svg#icon-pinterest-with-circle"
@@ -156,7 +191,7 @@
                         </a>
                     </li>
                     <li class="social__icon">
-                        <a href=""
+                        <a href="https://www.twitter.com"
                             ><svg class="svg">
                                 <use
                                     xlink:href="src/img/sprite.svg#icon-twitter-with-circle"
@@ -164,7 +199,7 @@
                         ></a>
                     </li>
                     <li class="social__icon">
-                        <a href=""
+                        <a href="https://www.facebook.com"
                             ><svg class="svg">
                                 <use
                                     xlink:href="src/img/sprite.svg#icon-facebook-with-circle"
@@ -172,7 +207,7 @@
                         ></a>
                     </li>
                     <li class="social__icon">
-                        <a href=""
+                        <a href="https://www.linkedin.com"
                             ><svg class="svg">
                                 <use
                                     xlink:href="src/img/sprite.svg#icon-linkedin-with-circle"
