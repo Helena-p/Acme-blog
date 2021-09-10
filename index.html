@@ -4,12 +4,91 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400&family=IBM+Plex+Serif:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="dist/css/style.css" />
+        <link rel="icon" href="src/img/favicon.ico" />
         <title>Acme Blog</title>
     </head>
     <body>
-        <header></header>
-        <main></main>
-        <footer></footer>
+        <!-- Header with navigation -->
+        <nav class="navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#">home</a></li>
+                <li class="nav__item"><a href="#">blog</a></li>
+            </ul>
+        </nav>
+        <header>
+            <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
+            <h1>Lorem ipsum dolor sit amet, consectet adipiscing</h1>
+            <h2>
+                Lorem ipsum dolor sit amet, consectet adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna.
+            </h2>
+            <a href="#">
+                <p>connect &GT;</p>
+            </a>
+        </header>
+        <main>
+            <!-- About -->
+            <article>
+                <h3>About</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore dolore magna sed do
+                    amet.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                    Lorem ipsum dolor sit amet, consectet adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna.
+                </p>
+            </article>
+
+            <!-- Blog -->
+            <section>
+                <h3>Blog</h3>
+                <p>Latest thoughts, news and ideas</p>
+                <div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </section>
+
+            <!-- Subscribe -->
+            <section>
+                <h3>Inbox</h3>
+                <p>Knowledge letters</p>
+                <form action="" class="form">
+                    <label for="">Name</label>
+                    <input type="text" />
+                    <label for="">Email</label>
+                    <input type="email" />
+                </form>
+                <a href="#">
+                    <p>Subscribe &GT;</p>
+                </a>
+            </section>
+        </main>
+        <footer>
+            <img src="src/img/logo.svg" alt="Acme logo" class="icon" />
+            <ul class="footer__list">
+                <p>Map</p>
+                <li class="footer__item"><a href="">Blog</a></li>
+                <li class="footer__item"><a href="">Privacy</a></li>
+            </ul>
+            <ul class="footer__list">
+                <p>Resources</p>
+                <li class="footer__item"><a href="">Courses</a></li>
+                <li class="footer__item"><a href="">Hacks</a></li>
+                <li class="footer__item"><a href="">Free tuff</a></li>
+            </ul>
+        </footer>
     </body>
 </html>
