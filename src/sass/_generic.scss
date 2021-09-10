@@ -8,8 +8,19 @@
 h1,
 h2,
 h3,
+h4 {
+    line-height: 1;
+}
+
+body,
+h1,
+h2,
+h3,
 h4,
-p {
+p,
+dl,
+dd,
+figure {
     margin: 0;
 }
 
@@ -48,17 +59,42 @@ html {
 
 body {
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: var(--fs-300);
+    font-size: var(--fs-400);
     font-weight: 400;
-    line-height: 1.6;
     letter-spacing: -2%;
+    line-height: 1.4;
     color: var(--clr-neutral-900);
-    margin: 0;
-    padding: 0.5rem;
+    padding: 1.5rem;
 }
 
-h1 {
+// Typography
+h1,
+h2,
+h3,
+.text-serif {
+    font-family: "IBM Plex Serif", serif;
+    font-weight: var(--fw-200);
+}
+
+.text-500 {
+    font-size: var(--fs-500);
+}
+
+.page-title {
     font-size: var(--fs-700);
+}
+
+.page-intro {
+    font-size: var(--fs-600);
+}
+
+.section-title {
+    font-size: var(--fs-600);
+    color: var(--clr-neutral-400);
+}
+
+.section-subtitle {
+    font-size: var(--fs-600);
 }
 
 // Font large screen sizes
@@ -73,10 +109,10 @@ h1 {
     }
 }
 
+// General layout
 .container {
     max-width: 50rem;
     margin: 0 auto;
-    padding: 1rem;
 }
 
 .flex {
