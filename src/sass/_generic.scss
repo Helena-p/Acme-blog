@@ -60,3 +60,9 @@ body {
     margin: 0 auto;
     padding: 1rem;
 }
+
+.copyright,
+.social__list {
+    display: flex;
+    align-items: center;
+}
