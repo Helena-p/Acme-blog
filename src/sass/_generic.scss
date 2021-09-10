@@ -62,7 +62,7 @@ h1 {
 }
 
 // Font large screen sizes
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
     :root {
         --fs-700: 4.25rem;
         --fs-600: 2.125rem;
@@ -77,4 +77,27 @@ h1 {
     max-width: 50rem;
     margin: 0 auto;
     padding: 1rem;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex > * + * {
+    margin: calc(var(--spacer) * 3) 0 0 0;
+}
+
+@media (min-width: 40em) {
+    .flex {
+        flex-direction: row;
+    }
+
+    .flex > * {
+        flex-basis: 100%;
+    }
+
+    .flex > * + * {
+        margin: 0 0 0 var(--gap, var(--spacer));
+    }
 }

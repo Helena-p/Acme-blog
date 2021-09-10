@@ -6,7 +6,7 @@
     "scripts": {
         "img": "imagemin src/img/* --out-dir=dist/img --plugin=pngquant --plugin=mozjpeg --plugin=pngcrush --plugin=zopfli",
         "watch:sass": "sass src/sass/main.scss dist/css/style.css -w",
-        "watch:js": "chokidar 'src/**/*.js' -c 'npm run js'",
+        "watch:js": "chokidar 'src/script/index.js' -c 'npm run js'",
         "watch:img": "chokidar 'src/img/**/*.*' -c 'npm run img'",
         "devserver": "live-server",
         "start": "npm-run-all --parallel devserver watch:sass watch:js watch:img",

@@ -83,7 +83,7 @@ h1 {
   font-size: var(--fs-700);
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 40em) {
   :root {
     --fs-700: 4.25rem;
     --fs-600: 2.125rem;
@@ -99,6 +99,28 @@ h1 {
   padding: 1rem;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex > * + * {
+  margin: calc(var(--spacer) * 3) 0 0 0;
+}
+
+@media (min-width: 40em) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .flex > * {
+    flex-basis: 100%;
+  }
+
+  .flex > * + * {
+    margin: 0 0 0 var(--gap, var(--spacer));
+  }
+}
 .svg {
   width: 3rem;
   height: 3rem;
