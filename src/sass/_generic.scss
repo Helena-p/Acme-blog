@@ -67,6 +67,11 @@ body {
     padding: 1.5rem;
 }
 
+.bg-primary-300 {
+    background-color: var(--clr-primary-300);
+    border-radius: var(--brd-radius);
+}
+
 // Typography
 h1,
 h2,
@@ -118,37 +123,5 @@ section {
 @media (min-width: 40em) {
     section {
         padding: 3.5rem;
-    }
-}
-
-.container {
-    max-width: 50rem;
-    margin: 0 auto;
-}
-
-.flow-content > * + * {
-    margin-top: var(--flow-spacer, 1em);
-}
-
-.flex {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex > * + * {
-    margin: calc(var(--spacer) * 3) 0 0 0;
-}
-
-@media (min-width: 40em) {
-    .flex {
-        flex-direction: row;
-    }
-
-    .flex > * {
-        flex-basis: 100%;
-    }
-
-    .flex > * + * {
-        margin: 0 0 0 var(--gap, var(--spacer));
     }
 }
