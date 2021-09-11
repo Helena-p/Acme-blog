@@ -73,7 +73,7 @@
     cursor: pointer;
     border: 0;
     background: none;
-    font-family: "IBM Plex sans", sans-serif;
+    font-family: var(--ff-sans);
     font-weight: var(--fw-700);
     font-size: var(--fs-300);
 
@@ -93,6 +93,32 @@
     .cta {
         form {
             flex-direction: row;
+        }
+    }
+}
+
+.footer {
+    &__inner {
+        --border: 2px solid var(--clr-neutral-200);
+        border-top: var(--border);
+        border-bottom: var(--border);
+        padding: 3em 0;
+        margin: 2em 0;
+    }
+
+    dt {
+        font-family: var(--ff-serif);
+        font-weight: var(--fw-200);
+        color: var(--clr-neutral-400);
+    }
+
+    dd > a {
+        font-weight: var(--fw-700);
+        font-size: var(--fs-300);
+
+        &:hover,
+        &:focus {
+            color: var(--clr-primary-400);
         }
     }
 }
