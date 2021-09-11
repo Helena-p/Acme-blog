@@ -3,4 +3,9 @@
     height: 3rem;
     padding: 0.2rem;
     fill: var(--clr-neutral-400);
+
+    &:hover,
+    &:focus {
+        fill: var(--clr-primary-400);
+    }
 }

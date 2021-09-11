@@ -30,6 +30,13 @@ ol[class] {
     padding: 0;
 }
 
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -70,6 +77,8 @@ body {
 .bg-primary-300 {
     background-color: var(--clr-primary-300);
     border-radius: var(--brd-radius);
+    padding-left: var(--spacer);
+    padding-right: var(--spacer);
 }
 
 // Typography
@@ -100,10 +109,6 @@ h3,
 
 .section-subtitle {
     font-size: var(--fs-600);
-}
-
-.btn {
-    color: var(--clr-neutral-900);
 }
 
 // Font large screen sizes
