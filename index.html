@@ -16,23 +16,17 @@
     </head>
     <body>
         <!-- Header with navigation -->
-        <header>
-            <div>
-                <img src="src/img/hero.jpg" class="hero-img" />
-                <div class="navigation">
-                    <a href="#" aria-label="acme home page"
-                        ><img
-                            src="src/img/logo.svg"
-                            alt="Acme logo"
-                            class="icon"
-                    /></a>
-                    <nav class="navigation">
-                        <ul class="nav__list">
-                            <li><a href="#">home</a></li>
-                            <li><a href="#">blog</a></li>
-                        </ul>
-                    </nav>
-                </div>
+        <header class="header">
+            <div class="header__inner">
+                <a href="#" aria-label="acme home page"
+                    ><img src="src/img/logo.svg" alt="Acme logo" class="icon"
+                /></a>
+                <nav class="navigation">
+                    <ul class="nav__list">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
 
@@ -191,7 +185,7 @@
                 </div>
                 <div class="flex text-serif">
                     <p class="copyright">2020 acme. All rights reserved</p>
-                    <ul class="flex">
+                    <ul class="social__list">
                         <li class="social__icon">
                             <a href="https://www.pinterest.com">
                                 <svg class="svg">
