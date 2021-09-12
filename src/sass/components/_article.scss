@@ -1,3 +1,5 @@
+@use '../tools' as *;
+
 .article-preview {
     img {
         object-fit: cover;
@@ -15,5 +17,32 @@
         font-weight: var(--fw-400);
         font-size: var(--fs-200);
         color: var(--clr-neutral-400);
+    }
+}
+
+/* Blog page styles */
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 3em 2em;
+
+    > * {
+        &:first-child {
+            grid-column: 1 / -1;
+            display: flex;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            grid-column: span 3;
+        }
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            grid-column: span 2;
+        }
+        &:nth-child(7),
+        &:nth-child(8) {
+            grid-column: span 3;
+        }
     }
 }

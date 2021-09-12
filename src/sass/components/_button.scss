@@ -1,8 +1,7 @@
+@use '../tools' as *;
+
 .btn {
-    color: var(--clr-neutral-900);
-    cursor: pointer;
-    border: 0;
-    background: none;
+    @include btn-style;
     font-family: var(--ff-sans);
     font-weight: var(--fw-700);
     font-size: var(--fs-300);
@@ -17,4 +16,10 @@
     &:focus {
         color: var(--clr-primary-400);
     }
+}
+
+.btn__category {
+    @include btn-style;
+    text-transform: uppercase;
+    font-size: var(--fs-200);
 }

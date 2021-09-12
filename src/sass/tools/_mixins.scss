@@ -1,5 +1,11 @@
 @mixin backgroundImg {
     background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
+}
+
+@mixin btn-style {
+    color: var(--clr-neutral-900);
+    cursor: pointer;
+    border: 0;
+    background: none;
 }
