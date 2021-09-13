@@ -18,6 +18,13 @@
         @include backgroundImg;
     }
 
+    &__story {
+        background: url(../../src/img/article.jpg), var(--clr-primary-400);
+        background-position: left;
+        @include backgroundImg;
+        background-size: 130%;
+    }
+
     &__inner {
         padding: 1.5rem;
     }

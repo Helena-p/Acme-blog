@@ -225,6 +225,12 @@ h3,
     grid-column: span 3;
   }
 }
+/* Story page styles */
+.article-full {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 .btn {
   color: var(--clr-neutral-900);
   cursor: pointer;
@@ -340,6 +346,13 @@ h3,
   background-position: center left;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.header__story {
+  background: url(../../src/img/article.jpg), var(--clr-primary-400);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 130%;
 }
 .header__inner {
   padding: 1.5rem;
