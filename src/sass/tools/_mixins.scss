@@ -9,3 +9,9 @@
     border: 0;
     background: none;
 }
+
+@mixin mq($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}

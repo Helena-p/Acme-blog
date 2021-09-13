@@ -26,6 +26,10 @@
             color: var(--clr-primary-400);
         }
     }
+
+    @include mq(40em) {
+        padding-bottom: 0;
+    }
 }
 
 .copyright {

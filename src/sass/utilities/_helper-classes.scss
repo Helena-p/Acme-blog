@@ -1,3 +1,5 @@
+@use '../tools/' as *;
+
 .container {
     max-width: 50rem;
     margin: 0 auto;
@@ -18,22 +20,22 @@
 .flex {
     display: flex;
     flex-direction: column;
+
+    @include mq(40em) {
+        flex-direction: row;
+    }
 }
 
 .flex > * + * {
     margin: calc(var(--spacer) * 3) 0 0 0;
+
+    @include mq(40em) {
+        margin: 0 0 0 var(--gap, var(--spacer));
+    }
 }
 
-@media (min-width: 40em) {
-    .flex {
-        flex-direction: row;
-    }
-
+@include mq(40em) {
     .flex > * {
         flex-basis: 100%;
-    }
-
-    .flex > * + * {
-        margin: 0 0 0 var(--gap, var(--spacer));
     }
 }

@@ -35,13 +35,13 @@
     }
 }
 
-@media (min-width: 30em) {
+@include mq(30em) {
     .article-grid > *:not(:first-child) {
         grid-column: span 3;
     }
 }
 
-@media (min-width: 40em) {
+@include mq(40em) {
     .article-grid {
         > .article-preview:first-child {
             display: grid;
