@@ -71,7 +71,7 @@
         a:link,
         a:visited {
             color: currentColor;
-            transform: translate 1.5s ease-in-out;
+            transition: all 350ms ease-in-out;
         }
 
         a:hover,

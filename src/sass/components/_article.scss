@@ -1,6 +1,9 @@
 @use '../tools' as *;
 
 .article-preview {
+    position: relative;
+    z-index: 0;
+
     img {
         object-fit: cover;
         height: 12.5rem;
@@ -17,6 +20,29 @@
         font-weight: var(--fw-400);
         font-size: var(--fs-200);
         color: var(--clr-neutral-400);
+    }
+
+    a {
+        display: block;
+
+        &::before {
+            --offset: -0.6em;
+            content: "";
+            position: absolute;
+            top: var(--offset);
+            left: var(--offset);
+            right: var(--offset);
+            bottom: var(--offset);
+            box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.15);
+            border-radius: var(--brd-radius);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 350ms ease-in-out;
+        }
+    }
+    &:hover a::before,
+    &:focus a::before {
+        opacity: 1;
     }
 }
 
@@ -84,8 +110,19 @@
     }
 }
 
+.story {
+    @include section-border;
+    display: grid;
+    place-content: center;
+}
+
 /* Story page styles */
 .article-full {
+    --flow-spacer: 2em;
     max-width: 40rem;
     margin: 0 auto;
+
+    & h3 + p {
+        margin-top: 0;
+    }
 }

@@ -3,6 +3,7 @@
 h1,
 h2,
 h3,
+.article-full h3 + p,
 .text-serif {
     font-family: var(--ff-serif);
     font-weight: var(--fw-200);
@@ -20,11 +21,13 @@ h3,
     font-size: var(--fs-600);
 }
 
+.article-full h3,
 .section-title {
     font-size: var(--fs-600);
     color: var(--clr-neutral-400);
 }
 
+.article-full h3 + p,
 .section-subtitle {
     font-size: var(--fs-600);
 }

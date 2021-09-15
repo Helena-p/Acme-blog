@@ -4,11 +4,7 @@
     padding-bottom: 3rem;
 
     &__inner {
-        --border: 2px solid var(--clr-neutral-200);
-        border-top: var(--border);
-        border-bottom: var(--border);
-        padding: 3em 0;
-        margin: 2em 0;
+        @include section-border;
     }
 
     dt {

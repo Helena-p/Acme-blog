@@ -10,6 +10,14 @@
     background: none;
 }
 
+@mixin section-border {
+    --border: 2px solid var(--clr-neutral-200);
+    border-top: var(--border);
+    border-bottom: var(--border);
+    padding: 3em 0;
+    margin: 2em 0;
+}
+
 @mixin mq($size) {
     @media (min-width: $size) {
         @content;
