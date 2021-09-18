@@ -122,58 +122,64 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // VARIABLES
 //=========================
 
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var FORM = document.querySelector(".form");
-var NAME = document.querySelector("[data-name]");
-var EMAIL = document.querySelector("[data-email]"); //=========================
+var form = document.querySelector(".form");
+var nameInput = document.querySelector("#name");
+var emailInput = document.querySelector("#email"); //=========================
 // FUNCTIONS
 //=========================
-// On submit, check for valid email
+
+function setSuccess(input) {
+  var formControl = input.parentElement;
+  var small = formControl.querySelector("small");
+  formControl.className = "form__control success";
+  small.textContent = "";
+}
+
+function setError(input, message) {
+  var formControl = input.parentElement;
+  var small = formControl.querySelector("small");
+  formControl.className = "form__control error";
+  small.classList.remove("hidden");
+  small.textContent = message;
+}
+
+function checkInput() {
+  var user = nameInput.value.trim();
+  var email = emailInput.value.trim();
+
+  if (user === "") {
+    setError(nameInput, "Name can not be empty");
+  } else {
+    setSuccess(nameInput);
+  }
+
+  if (email === "") {
+    setError(emailInput, "Email can not be empty");
+  } else {
+    setSuccess(emailInput);
+  }
+} // On submit, check for valid email
+
 
 function validateMail(mail) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(mail).toLowerCase());
-}
-
-function checkUserInput() {
-  var _iterator = _createForOfIteratorHelper(FORM),
-      _step;
-
-  try {
-    for (_iterator.s(); !(_step = _iterator.n()).done;) {
-      var input = _step.value;
-      input.value.trim();
-    }
-  } catch (err) {
-    _iterator.e(err);
-  } finally {
-    _iterator.f();
-  }
-}
-
-function userMessage() {} //=============================
+} //=============================
 // EVENT LISTENERS
 //=============================
 // Listen for change in inputfield.
 // For incorrect input, logs message to user
 
 
-FORM.addEventListener("change", function (e) {
+form.addEventListener("change", function (e) {
   e.preventDefault();
-  checkUserInput();
+  checkInput();
 }); // Listens for submit to be clicked
 // If nonvalid, notify user
 
-FORM.addEventListener("submit", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   validateMail();
-  NAME.classList.remove("error");
-  NAME.classList.remove("success");
 });
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -203,7 +209,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52016" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49609" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

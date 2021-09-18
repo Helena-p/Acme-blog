@@ -3,13 +3,44 @@
 //=========================
 // VARIABLES
 //=========================
-const FORM = document.querySelector(".form");
-const NAME = document.querySelector("[data-name]");
-const EMAIL = document.querySelector("[data-email]");
+const form = document.querySelector(".form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
 
 //=========================
 // FUNCTIONS
 //=========================
+function setSuccess(input) {
+    let formControl = input.parentElement;
+    let small = formControl.querySelector("small");
+    formControl.className = "form__control success";
+    small.textContent = "";
+}
+
+function setError(input, message) {
+    let formControl = input.parentElement;
+    let small = formControl.querySelector("small");
+    formControl.className = "form__control error";
+    small.classList.remove("hidden");
+    small.textContent = message;
+}
+
+function checkInput() {
+    let user = nameInput.value.trim();
+    let email = emailInput.value.trim();
+
+    if (user === "") {
+        setError(nameInput, "Name can not be empty");
+    } else {
+        setSuccess(nameInput);
+    }
+
+    if (email === "") {
+        setError(emailInput, "Email can not be empty");
+    } else {
+        setSuccess(emailInput);
+    }
+}
 
 // On submit, check for valid email
 function validateMail(mail) {
@@ -18,28 +49,18 @@ function validateMail(mail) {
     return re.test(String(mail).toLowerCase());
 }
 
-function checkUserInput() {
-    for (let input of FORM) {
-        input.value.trim();
-    }
-}
-
-function userMessage() {}
-
 //=============================
 // EVENT LISTENERS
 //=============================
 // Listen for change in inputfield.
 // For incorrect input, logs message to user
-FORM.addEventListener("change", (e) => {
+form.addEventListener("change", (e) => {
     e.preventDefault();
-    checkUserInput();
+    checkInput();
 });
 // Listens for submit to be clicked
 // If nonvalid, notify user
-FORM.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     validateMail();
-    NAME.classList.remove("error");
-    NAME.classList.remove("success");
 });
