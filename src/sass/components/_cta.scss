@@ -34,11 +34,44 @@
             opacity: 1;
         }
     }
+
+    small {
+        visibility: hidden;
+    }
 }
 
 /* ----- Form validation styles ----- */
 .form__control.success {
+    position: relative;
+    visibility: visible;
     input {
         border-bottom: 2px solid var(--clr-success-400);
+    }
+    &::after {
+        content: "\2713";
+        color: var(--clr-success-400);
+        position: absolute;
+        right: 0;
+        top: 30%;
+    }
+}
+
+.form__control.error {
+    position: relative;
+    visibility: visible;
+    input {
+        border-bottom: 2px solid var(--clr-error-400);
+    }
+    &::after {
+        content: "\00D7";
+        color: var(--clr-error-400);
+        position: absolute;
+        right: 0;
+        top: 30%;
+    }
+
+    small {
+        font-size: var(--fs-200);
+        color: var(--clr-error-400);
     }
 }

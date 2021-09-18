@@ -148,8 +148,8 @@
                         alt="Various home utilities floating in the sky"
                     />
                     <form action="" method="post" class="form">
-                        <div class="form__control success">
-                            <label for="name" data-label="name">Fullname</label>
+                        <div class="form__control" data-name>
+                            <label for="name">Fullname</label>
                             <input
                                 type="text"
                                 pattern="[A-Za-z]+"
@@ -160,9 +160,10 @@
                                 placeholder="Your fullname"
                                 required
                             />
+                            <small>Error message</small>
                         </div>
-                        <div class="form__control error">
-                            <label for="email" data-label="email">Email</label>
+                        <div class="form__control" data-email>
+                            <label for="email">Email</label>
                             <input
                                 type="email"
                                 id="email"
@@ -172,6 +173,7 @@
                                 placeholder="example@domaine.com"
                                 required
                             />
+                            <small>Error message</small>
                         </div>
                         <button type="submit" value="submit" class="btn">
                             Subscribe

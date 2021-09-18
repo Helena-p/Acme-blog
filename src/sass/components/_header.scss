@@ -37,6 +37,7 @@
     bottom: 0.4em;
     background: var(--clr-neutral-900);
     border-radius: var(--brd-radius);
+    z-index: 1;
 
     ul {
         display: flex;

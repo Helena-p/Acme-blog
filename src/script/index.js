@@ -4,7 +4,8 @@
 // VARIABLES
 //=========================
 const FORM = document.querySelector(".form");
-const FORM_BTN = document.querySelector(".btn");
+const NAME = document.querySelector("[data-name]");
+const EMAIL = document.querySelector("[data-email]");
 
 //=========================
 // FUNCTIONS
@@ -17,11 +18,28 @@ function validateMail(mail) {
     return re.test(String(mail).toLowerCase());
 }
 
+function checkUserInput() {
+    for (let input of FORM) {
+        input.value.trim();
+    }
+}
+
 function userMessage() {}
 
 //=============================
 // EVENT LISTENERS
 //=============================
+// Listen for change in inputfield.
+// For incorrect input, logs message to user
+FORM.addEventListener("change", (e) => {
+    e.preventDefault();
+    checkUserInput();
+});
 // Listens for submit to be clicked
 // If nonvalid, notify user
-FORM.addEventListener("click", userMessage);
+FORM.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateMail();
+    NAME.classList.remove("error");
+    NAME.classList.remove("success");
+});
