@@ -1,6 +1,14 @@
 "use strict";
-const form = document.querySelector(".form");
-const formBtn = document.querySelector(".btn");
+
+//=========================
+// VARIABLES
+//=========================
+const FORM = document.querySelector(".form");
+const FORM_BTN = document.querySelector(".btn");
+
+//=========================
+// FUNCTIONS
+//=========================
 
 // On submit, check for valid email
 function validateMail(mail) {
@@ -9,13 +17,11 @@ function validateMail(mail) {
     return re.test(String(mail).toLowerCase());
 }
 
+function userMessage() {}
+
+//=============================
+// EVENT LISTENERS
+//=============================
 // Listens for submit to be clicked
 // If nonvalid, notify user
-form.addEventListener("click", function () {
-    let mail = emailInput.value;
-    if (validateMail(mail)) {
-        reply.innerHTML = "";
-    } else {
-        reply.innerHTML = "Oops! Please check your email";
-    }
-});
+FORM.addEventListener("click", userMessage);

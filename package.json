@@ -4,8 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "parcel *.html",
-        "build": "parcel build index.html"
+        "dev": "parcel index.html pages/blog.html pages/story.html",
+        "build": "parcel build index.html pages/blog.html pages/story.html"
     },
     "keywords": [],
     "author": "Helena Plantin",
@@ -19,7 +19,7 @@
         "imagemin-pngcrush": "^7.0.0",
         "imagemin-pngquant": "^9.0.2",
         "imagemin-zopfli": "^7.0.0",
-        "parcel": "^2.0.0-rc.0",
+        "parcel-bundler": "^1.12.5",
         "postcss-cli": "^8.3.1",
         "sass": "^1.38.0"
     }

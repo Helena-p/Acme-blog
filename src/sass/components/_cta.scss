@@ -35,3 +35,10 @@
         }
     }
 }
+
+/* ----- Form validation styles ----- */
+.form__control.success {
+    input {
+        border-bottom: 2px solid var(--clr-success-400);
+    }
+}
